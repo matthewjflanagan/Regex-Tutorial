@@ -1,10 +1,10 @@
-# Title (replace with your title)
-
-Introductory paragraph (replace this with your text)
+# Matching Email Addresses
+*desciption*
+Introducing what regex is (3-4 lines)
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+I will be showing you how to match email addresses using the regex syntax `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`(3-4 lines)
 
 ## Table of Contents
 
@@ -19,11 +19,16 @@ Briefly summarize the regex you will be describing and what you will explain. In
 
 ## Regex Components
 
+
 ### Anchors
+In the email validator this symbol `^` and `$` is the anchor, the anchor is tells what the parameters of the regex are. `^` is the start, `$` is the end of the anchor
 
 ### Quantifiers
+The quantifier indicated by `{2,6}` is telling how many characters must be present in the string. Between 2 and 6 characters 
 
 ### Grouping Constructs
+
+
 
 ### Bracket Expressions
 
