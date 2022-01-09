@@ -1,15 +1,15 @@
 # Matching Email Addresses
-In this repository I and going to demonstrate a regular expression, also called "regex". For the example below we will be explaining the regex  for matching an email! 
+This repository is an explaination of a regular expression, also known as "regex". I will be explaining each component of the regex below that is used for matching an email address format.
 
 ## Summary
 
-I will be showing you how to match email addresses using the regex syntax:
+I will be explain each component of the regex below for matching an email address format:
 
  ```javascript
  /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
  ``` 
 
-This syntax requires our user to enter an email that 1. starts with a letter `a-z`, number `0-9`, or special characters `_\.-`, then the `@` is required before the second group of characters. Our user then must match any decimal digit (0-9)
+Anchors, Qualifiers, Grouping Constructs, Bracket Expressions, Character Classes, The OR Operator, Flags, and Character Escapes are the components used in this regex to set the criteria of the format a user must use when typing an email address. 
 
 ## Table of Contents
 
@@ -24,36 +24,37 @@ This syntax requires our user to enter an email that 1. starts with a letter `a-
 
 ## Regex Components
 
-
 ### Anchors
-In the email validator this symbol `^` and `$` is the anchor, the anchor is tells what the parameters of the regex are. `^` is the start, `$` is the end of the anchor
+The symbols  `^` and `$` are the anchor beginning and end of an anchor, all parameters used in a regular expression go in between `^` and `$`. Anchors work with Flags  `/` so that searches only match with things that match the all of our regex parameters. 
 
 ### Quantifiers
-The quantifier indicated by `{2,6}` is telling how many characters must be present in the string. Between 2 and 6 characters 
+The quantifier indicated by `{2,6}` is telling how many characters must be present in the string. Between 2 and 6 characters . 
 
 ```
 [a-z\.]{2,6}
 ```
 
+The Bracket Expression before the Quantifier is searching for any letter between 'a-z' or '.' periods. The Quantifier is searching for between 2 and 6 characters the match the criteria of the Bracket Expression, therefore, search for any letters between 'a-z' or '.' periods between 2 and 6 characters. 
+
 ### Grouping Constructs
-The grouping contructs are indicated by `()` and will capture anything that matches inside. For example, `(a)b(c)` captures `a` and `c`. 
+The grouping contructs are indicated by `()` and will capture anything that matches inside. For example, `(a)b(c)` captures `a` and `c`. There are 3 Grouping Constructs in this regex. 
 
 ```
 ([a-z0-9_\.-]+)
 ```
-
-
+This Grouping Construct sets up the parameters before the '@' sign in the email address. It is searching for any letter between 'a-z', any number from 0-9, '_' underscores, '.' periods, and '-' hyphens. 
 
 ```
 ([\da-z\.-]+)
 ```
 
-
-
+This Grouping Construct sets up the parameters after the '@ sign in the email address. It is searching for any letter between 'a-z', '.', periods, '-' and hyphens. 
 
 ```
 ([a-z\.]{2,6})
 ```
+
+This Grouping Construct sets up the parameters after the '.' period in the email address. it is searching for any letter between 'a-z'. '.' periods, and the Quantifier states the group must be between 2-6 characters.
 
 ### Bracket Expressions
 Bracket expressions matches anything contained in brakets. `[abc]` matches `a`, `b`, or `c`.
