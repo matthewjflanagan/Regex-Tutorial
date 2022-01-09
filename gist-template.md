@@ -5,7 +5,9 @@ Introducing what regex is (3-4 lines)
 ## Summary
 
 I will be showing you how to match email addresses using the regex syntax:
- ```/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/``` 
+ ```javascript
+ /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+ ``` 
 This syntax requires our user to enter an email that 1. starts with a letter `a-z`, number `0-9`, or special characters `_\.-`, then the `@` is required before the second group of characters. Our user then must match any decimal digit (0-9)
 
 ## Table of Contents
