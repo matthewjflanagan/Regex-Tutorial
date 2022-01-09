@@ -42,43 +42,42 @@ The grouping contructs are indicated by `()` and will capture anything that matc
 ```
 ([a-z0-9_\.-]+)
 ```
-This Grouping Construct sets up the parameters before the '@' sign in the email address. It is searching for any letter between 'a-z', any number from 0-9, '_' underscores, '.' periods, and '-' hyphens. 
+The Grouping Construct above sets up the parameters before the '@' sign in the email address. It is searching for any letter between 'a-z', any number from 0-9, '_' underscores, '.' periods, and '-' hyphens. 
 
 ```
 ([\da-z\.-]+)
 ```
 
-This Grouping Construct sets up the parameters after the '@ sign in the email address. It is searching for any letter between 'a-z', '.', periods, '-' and hyphens. 
+The Grouping Construct above sets up the parameters after the '@ sign in the email address. It is searching for any letter between 'a-z', '.', periods, '-' and hyphens. 
 
 ```
 ([a-z\.]{2,6})
 ```
 
-This Grouping Construct sets up the parameters after the '.' period in the email address. it is searching for any letter between 'a-z'. '.' periods, and the Quantifier states the group must be between 2-6 characters.
+The Grouping Construct above sets up the parameters after the '.' period in the email address. it is searching for any letter between 'a-z'. '.' periods, and the Quantifier states the group must be between 2-6 characters.
 
 ### Bracket Expressions
 Bracket expressions matches anything contained in brakets. `[abc]` matches `a`, `b`, or `c`.
 
-For the purpose of matching email-addresses we are saying to capture anthing with that matches with `[a-z0-9_\.-]`
-
-
+For the purpose of matching email-addresses we are saying to capture anthing with that matches with `[a-z0-9_\.-]`, `[\da-z\.-]`, and `[a-z\.]`. 
 
 ```
 [a-z0-9_\.-]
 ```
 
-
+The Bracket Expression above with match with any string with any letter between 'a-z', any number from 0-9, '_' underscores, '.' periods, or '-' hyphens. 
 
 ```
 [\da-z\.-]
 ```
 
-
+The Bracket Expression above with match with any string that contains any digit, any letter between 'a-z', 'periods', or '-' hyphens. 
 
 ```
 [a-z\.]
 ```
 
+The Bracket Expression above with match with any string with any letter between 'a-z' and '.' periods.
 ### Character Classes
 
 `+` Matches character before + one or more times `a+c` matches `ac`, `aac`, `aaac`
