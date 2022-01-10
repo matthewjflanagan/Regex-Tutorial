@@ -9,7 +9,7 @@ I will be explain each component of the regex below for matching an email addres
  /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
  ``` 
 
-Anchors, Qualifiers, Grouping Constructs, Bracket Expressions, Character Classes, The OR Operator, Flags, and Character Escapes are the components used in this regex to set the criteria of the format a user must use when typing an email address. 
+Anchors, Qualifiers, Grouping Constructs, Bracket Expressions, Character Classes, Flags, and Character Escapes are the components used in this regex to set the criteria of the format a user must use when typing an email address. 
 
 ## Table of Contents
 
@@ -18,7 +18,6 @@ Anchors, Qualifiers, Grouping Constructs, Bracket Expressions, Character Classes
 - [Grouping Constructs](#grouping-constructs)
 - [Bracket Expressions](#bracket-expressions)
 - [Character Classes](#character-classes)
-- [The OR Operator](#the-or-operator)
 - [Flags](#flags)
 - [Character Escapes](#character-escapes)
 
@@ -80,27 +79,17 @@ The Bracket Expression above with match with any string that contains any digit,
 The Bracket Expression above with match with any string with any letter between 'a-z' and '.' periods.
 ### Character Classes
 
-`+` Matches character before + one or more times `a+c` matches `ac`, `aac`, `aaac`
+The only character class in this regex is `\d`
 
 ```
 [\da-z\.-]
 ```
 
-### The OR Operator
-
-The OR operator `|` is not mentioned in this regular expression. 
-
-```
-@([\da-z\.-]+)
-```
-
-
-
-```
-\.([a-z\.]{2,6})
-```
+The character class above will search for any character with a "digit"
 
 ### Flags
+
+Flags are denoted by `/` at the beggining and end of a regex. Flags work with Anchors so that searches only match with things that match the all of our regex parameters. 
 
 ### Character Escapes
 
@@ -110,6 +99,12 @@ An escape sequence is two or more characters that often begin with an escape cha
 \.
 ```
 
+The Character Escape will make our regex search for a literal '.' character. Without the backslash our regex would search for any character except line breaks. 
+
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+Matthew Flanagan
+
+Full-Stack Developer
+[Github_Profile](https://github.com/matthewjflanagan)
+Contact: mattflanagan40@gmail.com
